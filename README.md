@@ -1,5 +1,5 @@
 # xamarin-uitest-tricks
-Let's solve the problems that I faced while automating some specific UI Controls in Android and iOS applications.
+Let's solve the problems that I faced while automating some specific UI Controls in Android and iOS applications in Xamarin.UITest
 
 ## `Pull-To-Refresh:`
 Automating pull-to-refresh is sometimes difficult and handled very differently in iOS and Android applications. Why? Let's see the code:
@@ -292,3 +292,5 @@ In iOS, `TimePicker` can be of 2 types: `24 Hour Clock` or `12 Hour Clock`.
 
         public float GetScreenHeight() => height;
 ```
+
+*Stay tuned for more tips and code!!*
