@@ -131,6 +131,17 @@ Let's see how we can automate the `DatePicker` controls in Android and iOS.
 
 ![iOS](images/ios_datepicker.png) 
 ```C#
+        #region iOS Configuration
+         private const string iOSDatePickerClass = "UIDatePicker";
+         private const string iOSTableViewClass = "UIPickerView";
+         private const int iOSDateMonthColumn = 0;
+         private const int iOSDateDayColumn = 1;
+         private const int iOSDateYearColumn = 2;
+         private const string iOSDoneButtonText = "Done";
+         public AppResult[] iOSDoneButton => App.AppInstance.WaitForElement(x => x.Text(iOSDoneButtonText));
+         #endregion
+ 
+         private static readonly TimeSpan DefaultTimeout = TimeSpan.FromSeconds(5);
         /// <summary>
          /// Selects provided date in the Picker.
          /// Workaround: Always Tap on expected value before tapping Done.
@@ -212,7 +223,17 @@ In iOS, `TimePicker` can be of 2 types: `24 Hour Clock` or `12 Hour Clock`.
 
 ![iOS](images/ios_timepicker.png) 
 ```C#
-        /// <summary>
+         #region iOS Configuration
+         private const string iOSDatePickerClass = "UIDatePicker";
+         private const string iOSTableViewClass = "UIPickerView";
+         private const int iOSTimeHourColumn = 0;
+         private const int iOSTimeMinuteColumn = 1;
+         private const int iOSTimePeriodColumn = 2;
+         private const string iOSDoneButtonText = "Done";
+         public AppResult[] iOSDoneButton => App.AppInstance.WaitForElement(x => x.Text(iOSDoneButtonText));
+         #endregion 
+         
+         /// <summary>
          /// Updates the time picker.
          /// Note: Picker loads +/-3 values from the current selection
          /// </summary>
